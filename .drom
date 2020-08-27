@@ -5,7 +5,7 @@ b73e17f8727e0a5d91fe861d801932ad .github/workflows/workflow.yml
 d41d8cd98f00b204e9800998ecf8427e .ocamlformat
 c60ab720599f37b497cc92535eaa986f CHANGES.md
 a76cc78efbfa6be8d188ba094c2ad827 LICENSE.md
-79976dfbac5c34041f916f1d05ad5333 Makefile
+8a6901f0b726cebbf05ea4a9da104c7f Makefile
 3e8c825011f8daf7799ab143a7c6c2c4 README.md
 d41d8cd98f00b204e9800998ecf8427e docs/.nojekyll
 6850d314fcb2629db681d1b7165f146b docs/doc/index.html
