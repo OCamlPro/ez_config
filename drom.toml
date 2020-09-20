@@ -1,18 +1,21 @@
 [project]
+drom-version = "0.1.0"
+
+[project]
 authors = ["Fabrice Le Fessant <fabrice.le_fessant@ocamlpro.com>"]
 copyright = "OCamlPro SAS"
-dir = "src"
 edition = "4.10.0"
 github-organization = "ocamlpro"
-kind = "library"
 license = "LGPL2"
-min-edition = "4.03.0"
+min-edition = "4.06.0"
 mode = "binary"
 name = "ez_config"
 synopsis = "Easy management of configuration files"
 version = "0.1.1"
+windows-ci = false
 
 # keys that you could also define:
+# sphinx-target = "...sphinx-target..."
 # archive = "...archive..."
 # dev-repo = "...dev-repo..."
 # bug-reports = "...bug-reports..."
@@ -28,14 +31,32 @@ MLdonkey and is close to ocaml-config.
 """
 
 [drom]
-skip = ""
+skip = "CHANGES.md src/ez_config/main.ml"
 
 [dependencies]
-ez_file = "0.1.0"
+ez_file = "0.2.0"
 
 [tools]
 dune = "2.6.0"
+[tools.ocamlformat]
+for-test = true
+[tools.odoc]
+for-doc = true
+[tools.ppx_expect]
+for-test = true
+[tools.ppx_inline_test]
+for-test = true
+
 [project]
 pack = "ezConfig"
 pack-modules = false
+skip-dirs = []
+
+
+[[package]]
+dir = "src/ez_config"
+gen-version = "version.ml"
+kind = "library"
+name = "ez_config"
+pack = "ezConfig"
 

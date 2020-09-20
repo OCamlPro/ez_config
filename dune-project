@@ -4,13 +4,18 @@
 (allow_approximate_merlin)
 (generate_opam_files false)
 (version 0.1.1)
+(formatting (enabled_for ocaml reason))
 
 (package
  (name ez_config)
  (synopsis "Easy management of configuration files")
  (description "EzConfig can be used to manage a configuration file with OCaml lexing\nconventions (string escaping, comments). It was initially used by \nMLdonkey and is close to ocaml-config.\n")
  (depends
-   (ocaml (>= 4.03.0))
-   (ez_file (and (>= 0.1.0) (< 1.0.0)))
+   (ocaml (>= 4.06.0))
+   (ez_file (and (>= 0.2.0) (< 1.0.0)))
+   ppx_inline_test
+   ppx_expect
+   odoc
+   ocamlformat
    (dune (and (>= 2.6.0) (< 3.0.0)))
  ))
