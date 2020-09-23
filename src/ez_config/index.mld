@@ -6,4 +6,5 @@ conventions (string escaping, comments). It was initially used by
 MLdonkey and is close to ocaml-config.
 
 
-This library exposes the following toplevel modules: {!modules:EzConfig SimpleConfig SimpleConfigOCaml SimpleConfigTypes Version}
+This library exposes the following toplevel modules:
+{!modules:EzConfig SimpleConfig SimpleConfigOCaml SimpleConfigTypes Version}
