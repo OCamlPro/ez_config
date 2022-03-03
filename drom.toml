@@ -1,20 +1,20 @@
 [project]
-drom-version = "0.1.0"
+drom-version = "0.1"
 
 [project]
 authors = ["Fabrice Le Fessant <fabrice.le_fessant@ocamlpro.com>"]
+ci-systems = ["ubuntu-latest", "macos-latest"]
 copyright = "OCamlPro SAS"
 edition = "4.10.0"
 github-organization = "ocamlpro"
 license = "LGPL2"
 min-edition = "4.07.0"
-mode = "binary"
 name = "ez_config"
 synopsis = "Easy management of configuration files"
-version = "0.1.1"
-windows-ci = false
+version = "0.2.0"
 
 # keys that you could also define:
+# odoc-target = "...odoc-target..."
 # sphinx-target = "...sphinx-target..."
 # archive = "...archive..."
 # dev-repo = "...dev-repo..."
@@ -24,18 +24,18 @@ windows-ci = false
 # homepage = "...homepage..."
 
 [project]
-description = """
-EzConfig can be used to manage a configuration file with OCaml lexing
+description = """EzConfig can be used to manage a configuration file with OCaml lexing
 conventions (string escaping, comments). It was initially used by 
 MLdonkey and is close to ocaml-config.
 """
 
-[drom]
-skip = "CHANGES.md src/ez_config/main.ml"
+[project]
+skip = ["CHANGES.md", "src/ez_config/main.ml"]
 
+# project-wide library dependencies (not for package-specific deps)
 [dependencies]
-ez_file = "0.2.0"
 
+# project-wide tools dependencies (not for package-specific deps)
 [tools]
 dune = "2.6.0"
 [tools.ocamlformat]
@@ -48,15 +48,28 @@ for-test = true
 for-test = true
 
 [project]
-pack = "ezConfig"
-pack-modules = false
+
+# dirs to skip while scanning for dune files
 skip-dirs = []
 
+# dirs to scan for share/ folders (with package names)
+share-dirs = ["share"]
+
+# build profile to use by default
+# build-profile = ...
+
+# Profile options for this project
+#    [profile]
+#    dev = { ocaml-flags = "-w +a-4-40-41-42-44" }
+#    release = { ocaml-flags = "-w -a" }
+[profile]
+# ...
+
+# project-wide fields (depends on project skeleton)
+[fields]
+# ...
 
 [[package]]
 dir = "src/ez_config"
-gen-version = "version.ml"
-kind = "library"
-name = "ez_config"
-pack = "ezConfig"
+# edit 'src/ez_config/package.toml' for package-specific options
 
