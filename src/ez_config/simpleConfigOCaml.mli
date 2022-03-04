@@ -20,6 +20,7 @@
     might be added to the last defined section instead of the DEFAULT section.
 *)
 
+open Ez_file.V1
 
 val parse : FileAbstract.t -> in_channel -> SimpleConfigTypes.option_module
 

@@ -14,7 +14,7 @@
  (description "EzConfig can be used to manage a configuration file with OCaml lexing\nconventions (string escaping, comments). It was initially used by \nMLdonkey and is close to ocaml-config.\n")
  (depends
    (ocaml (>= 4.07.0))
-   (ez_file (and (>= 0.2.0) (< 1.0.0)))
+   (ez_file (and (>= 0.3.0) (< 1.0.0)))
    ppx_inline_test
    ppx_expect
    odoc

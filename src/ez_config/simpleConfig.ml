@@ -15,6 +15,7 @@
      different exception for every possible error.
  *)
 
+open Ez_file.V1
 
 open [@ocaml.warning "-33"] EzCompat
 

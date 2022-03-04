@@ -10,6 +10,8 @@
 (*                                                                        *)
 (**************************************************************************)
 
+open Ez_file.V1
+
 type option_value =
     Module of option_module
   | StringValue of string
